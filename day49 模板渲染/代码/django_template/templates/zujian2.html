@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .left-menu {
+            background-color: tan;
+            width: 200px;
+            min-height: 600px;
+        }
+
+        .item {
+            background-color: yellow;
+            height: 40px;
+            border-bottom: 1px solid red;
+        }
+
+        .left {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="left">
+        <div class="left-menu">
+            {% for item in data %}  <!-- [11,22,33] -->
+                <div class="menu1 item">
+                    <a href="/t1/">{{ item }}</a>  <!-- 写相对路径时,前面的斜杠必须写 -->
+                </div>
+            {% endfor %}
+
+
+
+        </div>
+    </div>
+
+
+</body>
+</html>
